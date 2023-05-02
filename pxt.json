@@ -1,0 +1,18 @@
+{
+    "name": "flashstorage",
+    "version": "0.0.1",
+    "description": "",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "flashstorage.cpp"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "5.0.12",
+        "pxt": "8.0.7"
+    }
+}
