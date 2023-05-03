@@ -6,7 +6,8 @@
         "core": "*"
     },
     "files": [
-        "flashstorage.cpp"
+        "flashstorage.cpp",
+        "shim.d.ts"
     ],
     "targetVersions": {
         "target": "5.0.12",
