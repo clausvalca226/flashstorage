@@ -1,8 +1,5 @@
 #include "pxt.h"
-
-#if MICROBIT_CODAL
-	#include "MicroBit.h"
-#endif
+#include "MicroBit.h"
 
 namespace flashstorage {
 	/* Stores the given key/value pair. */
@@ -13,11 +10,7 @@ namespace flashstorage {
 	int storeData(String key, String value) {
 		if (NULL == key || NULL == value)
 			return DEVICE_INVALID_PARAMETER;
-		#if MICROBIT_CODAL
-			return uBit.storage.put(MSTR(key), MSTR(value), MSTR(value).length());
-		#else
-			return DEVICE_NOT_SUPPORTED;
-		#endif
+		return uBit.storage.put(MSTR(key), MSTR(value), MSTR(value).length());
 	}
 
 	/* Retrieves the given key/value pair. */
@@ -29,13 +22,9 @@ namespace flashstorage {
 		if (NULL == key)
 			return "DEVICE_INVALID_PARAMETER";
 		KeyValuePair* temp;
-		#if MICROBIT_CODAL
-			temp = uBit.storage.get(MSTR(key));
-			if(NULL == temp)
-				return "KEY NOT FOUND";
-			return temp->value;
-		#else
-			return "DEVICE_NOT_SUPPORTED";
-		#endif
+		temp = uBit.storage.get(MSTR(key));
+		if(NULL == temp)
+			return "KEY NOT FOUND";
+		return temp->value;
 	}
 }
