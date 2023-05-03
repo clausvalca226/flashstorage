@@ -31,6 +31,8 @@ namespace flashstorage {
 		KeyValuePair* temp;
 		#if MICROBIT_CODAL
 			temp = uBit.storage.get(MSTR(key));
+			if(NULL == temp)
+				return "KEY NOT FOUND";
 			return temp->value;
 		#else
 			return "DEVICE_NOT_SUPPORTED";
