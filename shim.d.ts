@@ -12,6 +12,6 @@ declare namespace flashstorage {
 	//% help=flashstorage/get-data
 	//% parts="flashstorage"
 	//% blockGap=8
-	//% group="micro:bit (V2)" shim=flashlog::getData
+	//% group="micro:bit (V2)" shim=flashstorage::getData
     function getData(key: string): string;
 }
