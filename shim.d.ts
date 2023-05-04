@@ -5,7 +5,7 @@ declare namespace flashstorage {
 	//% help=flashstorage/store-data
 	//% parts="flashstorage"
 	//% blockGap=8
-	//% group="micro:bit (V2)" shim=flashlog::storeData
+	//% group="micro:bit (V2)" shim=flashstorage::storeData
     function storeData(key: string, value: string): number;
 
     /* Retrieves the given key/value pair. */
